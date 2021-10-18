@@ -1,13 +1,21 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace TodoApp.Core
 {
     public class TodoItem
     {
-        public int TodoId { get; set;  }
+        
+        public int ID { get; set;  }
         public string Title { get; set; }
         public bool IsComplete { get; set; }
 
+
+        public TodoItem()
+        {
+            this.Title = "Default";
+            this.IsComplete = false;
+        }
 
         public TodoItem (string title)
         {
@@ -21,7 +29,7 @@ namespace TodoApp.Core
             this.IsComplete = isComplete;
         }
 
-        void MarkComplete()
+        public void MarkComplete()
         {
             this.IsComplete = true;
         }

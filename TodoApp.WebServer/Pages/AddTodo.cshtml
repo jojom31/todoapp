@@ -1,0 +1,13 @@
+﻿@page
+@model TodoApp.WebServer.Pages.AddTodoModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+}
+
+
+<form asp-action="post">
+    <input asp-for="@this.Model.AddedTodo.Title" />
+    <input asp-for="@this.Model.AddedTodo.IsComplete" />
+
+    <input type="submit" />
+</form>
